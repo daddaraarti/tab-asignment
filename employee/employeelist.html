@@ -1,0 +1,26 @@
+<table align="center" >
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Action</th>
+    </tr>
+    <tr ng-repeat="emp in Employee ">
+
+        <td>{{emp.id}}</td>
+        <td>{{emp.name }}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.city}}</td>
+        <td> 
+       
+
+        <button class="btn btn-primary" ng-click="editemployee(emp)" style="background-color: lightblue;block-size: 28px;">Edit</button>
+        <button class="btn btn-danger" ng-click="deleteuser($index)" style="background-color: #fb0b4d;block-size: 28px;">Delete</button>
+
+
+        </td>
+    </tr>
+
+</table>

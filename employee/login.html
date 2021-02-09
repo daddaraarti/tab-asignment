@@ -1,0 +1,23 @@
+<div class="body1" ng-controller="validateCtrl">
+<div >
+    <form  id="myLogin" name="myForm" novalidate>
+        <p class="uname">User Name
+            <input type="text" name="username" ng-model="username" style="height: 20px;width: 200px; border-radius: 4px;" required>
+            <span style="color:red"margin-left="49px" ng-show="myForm.username.$dirty && myForm.username.$invalid">
+                <span ng-show="myForm.username.$error.required"><br />User Name is required.</span>
+                <span ng-show="myForm.username.$error.email"><br />Invalid username address.</span>
+            </span>
+        </p>
+        <p class="pass">Password
+            <input type="password" name="pass" ng-model="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"style="height: 20px;width: 200px; border-radius: 4px;" required>
+            <span style="color:red"margin-left="49px" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+                <span ng-show="myForm.pass.$error.required"><br />Password is required.</span>
+            </span>
+        </p>
+        <p>
+        <button type="submit" style="height: 30px;width:210px;margin-left: 430px;background-color:blue;color: white;border-radius: 4px;" class="submit"
+      ng-disabled="myForm.username.$dirty && myForm.username.$invalid &&  myForm.pass.$dirty && myForm.pass.$invalid" ng-click="submit()">LOGIN</button>
+       </p>
+    </form>
+</div>
+</div>
