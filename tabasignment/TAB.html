@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>tab data</title>
+     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+
+    <script src="tab.js"></script> 
+    <link rel="stylesheet" type="text/css" href="TAB.css">
+
+</head>
+
+<body>
+    <div id="box1">
+        
+        <div id="box2">
+            <div class="smallbox1"><a href="#tab1">Tab1</a></div>
+            <div class="smallbox1"><a href="#tab2">Tab2</a></div>
+            <div class="smallbox1"><a href="#tab3">Tab3</a></div>
+        </div>
+        
+        <div class="data1" ng-view>
+            
+         </div>
+</body>
+
+</html>

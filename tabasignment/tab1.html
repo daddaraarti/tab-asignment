@@ -1,0 +1,10 @@
+
+<div class="tab"  data-ng-controller="tab1ctrl"> 
+    <p>Select a car:</p>
+
+    filter:<select data-ng-model="selectedCar" >
+        <option data-ng-repeat="x in cars   | filter:customFilter" value="{{x.name}}" >{{x.name}}</option>
+    </select>
+
+    <h4>You selected: {{selectedCar}}</h4> 
+</div> 
